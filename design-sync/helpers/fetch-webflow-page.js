@@ -48,15 +48,6 @@ module.exports = async function fetchWebflowPage({ url, ignoreError }) {
   // Add ignore attribute to slideshow images
   $(`.w-slider-mask img`).attr(`data-next-ignore`, `true`)
 
-  // Remove Webflow scripts
-  // $(`script`).each((i, el) => {
-  //   const $el = $(el)
-  //   const src = $el.attr(`src`)
-  //   if(src && containsAssetDomain(src)){
-  //     $el.remove()
-  //   }
-  // })
-
   // Remove Webflow styles
   let webflowStylesheetUrl
   let webflowStylesheet = ``

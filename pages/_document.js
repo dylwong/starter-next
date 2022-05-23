@@ -36,7 +36,11 @@ class MyDocument extends Document {
         <body {...meta.bodyAttributes}>
           <Main />
           <NextScript />
+
+          {/* Comment out the next line if you don't need Webflow's JavaScript */}
           <script src='/design-sync.js' defer></script>
+
+          
         </body>
       </Html>
     )
