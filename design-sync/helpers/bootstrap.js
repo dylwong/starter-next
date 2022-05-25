@@ -94,6 +94,7 @@ async function getAllLinks(queue = [], crawled = [], links = [], excludeFromSite
 		}
 	}
 	crawled.push(url)
+	console.log(`queue`, queue)
 	return getAllLinks(queue, crawled, links, excludeFromSitemap)
 }
 
@@ -111,9 +112,16 @@ async function createPageList(){
 	}
 	const islandLinks = config.pages || []
 	sitemapLinks.push(...islandLinks)
-	const allLinks = await getAllLinks([
+	let initUrls = [
 		`${site}/`,
-	])
+		...sitemapLinks,
+	]
+	// Remove duplicates
+	initUrls = initUrls.filter((url, i) => {
+		return initUrls.indexOf(url) === i
+	})
+
+	const allLinks = await getAllLinks(initUrls)
 	const crawlLinks = allLinks.links
 	const excludeFromSitemap = allLinks.excludeFromSitemap
 	
