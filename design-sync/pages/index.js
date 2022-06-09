@@ -273,7 +273,9 @@ export default function WebflowPage(props) {
         else{
           console.log(`Webflow: Initializing...`)
           firstLoad = true
-          window.webflowInit()
+          if(window.webflowInit){
+            window.webflowInit()
+          }
           window.Webflow.ready();
           document.dispatchEvent( new Event( 'readystatechange' ) );
           document.dispatchEvent(mountEvent)
@@ -285,7 +287,9 @@ export default function WebflowPage(props) {
             clearInterval(interval)
             console.log(`Webflow: Initializing...`)
             firstLoad = true
-            window.webflowInit()
+            if(window.webflowInit){
+              window.webflowInit()
+            }
             document.dispatchEvent( new Event( 'readystatechange' ) );
             document.dispatchEvent(mountEvent)
           }

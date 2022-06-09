@@ -238,7 +238,6 @@ async function fetchJs($, assetDomains){
 		}
 		else{
 			console.error(`Can't find init function.`)
-			process.exit(1)
 		}
 
 		if(config.removeBranding){
