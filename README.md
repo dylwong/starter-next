@@ -7,4 +7,4 @@
 
 DesignSync.js is a Next.js template that instantly imports and converts any Webflow site to React. You can use DesignSync.js to give your designers full control of your Next.js site. Skip weeks of frontend development time on every Next.js project.
 
-Visit [docs.designsync.app](http://docs.designsync.app/) to get started.
+Visit [docs.designsync.app](http://docs.designsync.app/) to get started.# afimnext
