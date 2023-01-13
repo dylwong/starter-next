@@ -1,5 +1,5 @@
 module.exports = {
-  site: `https://afim.webflow.io/`,
+  site: `https://styles-675452.webflow.io/`,
   pages: [],
   clientRouting: true,
   optimizeImages: true,
