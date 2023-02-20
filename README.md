@@ -3,5 +3,4 @@ JS based library with Cheerio that converts Webflow *and collections* to Next.js
 #Cheerio
 #Webflow
 #React Automation
-# starter-next
-# starter-next
+
